@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <meta charset="utf-8" lang="en">
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    <head>
+    <body>
+        <form>
+        <!-- Starting the header part -->
+        <div class="top">
+            <h1>Let's talk</h1>
+            <p>Think you have what it takes? Show us.</p>
+        </div>
+        <div class="personal-info">
+            <p class="category">1. Personal Information</p><hr />
+
+            <!-- Single line text fields -->
+            <div class="wrapper">
+            <div class="left-cat">
+
+
+
+                <input type="text" id = "fullName" placeholder="Full name*"onblur="fixErrorMsg('fullName', checkValidity())" class="medium-length" pattern="[A-Za-z]{2,15}(\s[A-Za-z]{2,15})+" required>
+                <input type="email" id="email" placeholder="Email*"onblur="fixErrorMsg()" class="medium-length" required>
+                <input type="email" id="conf-email" placeholder="Re-enter email*"onblur="fixErrorMsg()" class="medium-length" required>
+            </div>
+            <div class="right-cat">
+                <input type="text" placeholder="Phone*"onblur="fixErrorMsg()" id="phone" pattern="^(((\+|00)358)|0)[0-9]{9}" required><br />
+            </div>
+        </div>
+            <div class="clearfix"></div>
+                <textarea placeholder="Address*"onblur="fixErrorMsg()" rows="2" cols="50" class="full-length" id="address" required></textarea><br />
+                <input type="text" placeholder="City*"onblur="fixErrorMsg()" class="short-length" pattern="^[A-Za-z]{2,15}(\s[A-Za-z]{2,15})*$" required>
+                <input type="text" placeholder="State"onblur="fixErrorMsg()" class="short-length" pattern="[A-Za-z]{2,15}(\s[A-Za-z]{2,15})*" required>
+                <input type="text" placeholder="Country/Region*"onblur="fixErrorMsg()" class="short-length" pattern="[A-Za-z]{2,15}(\s?[A-Za-z]{2,15})*" required>
+                <input type="text" placeholder="Zip/Postal Code"onblur="fixErrorMsg()" id="zip" pattern="\d{5}" required><br /><br />
+
+                <input type="text" id="how-you-hear" placeholder="How did you hear about us?"onblur="fixErrorMsg()" class="full-length"><br /><br />
+
+        </div>
+        <div class="skills">
+            <p class="category">2. Skills and location</p><hr />
+            <p>Which is your primary design discipline?*</p><br />
+
+
+            <input type="radio" name="design-discipline" id="design-research" value="Design Research" checked>
+            <label for="design-research">Design Research</label>
+
+            <input type="radio" name="design-discipline" id="visual-design" value="Visual Design">
+            <label for="visual-design">Visual Design</label>
+
+            <input type="radio" name="design-discipline" id="ux-design" value="UX Design">
+            <label for="ux-design">UX Design</label>
+
+            <input type="radio" name="design-discipline" id="front-end" value="Front End Dev">
+            <label for="front-end">Front End Dev</label>
+
+            <br /><br />
+
+            <div class="left-skills" id="left-side">
+                <p>Do you have experience with any other disciplines?</p><br />
+                <div class="del-box">
+                    <input type="checkbox" name="skills" id="design" value="visual-design"><br />
+                    <label for="design">Visual Design</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="skills" id="ux" value="ux-design"><br />
+                    <label for="ux">UX Design</label>
+                    <span>&#10060;</span>
+                </div>
+
+                <div class="del-box">
+                    <input type="checkbox" name="skills" id="frontend" value="Front-end"><br />
+                    <label for="frontend">Front End</label>
+                    <span>&#10060;</span>
+                    <br />
+                </div>
+            </div>
+            <div class="right-skills">
+                <p>Where are you interested in working?*</p><br />
+                <p>You must be legally authorised to work without visa sponsorship in the location(s) you choose.</p><br />
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Austin" id="austin"><br />
+                    <label for="austin">Austin, Texas</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="NewYork" id="newyork"><br />
+                    <label for="newyork">New York, New York</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Toronto" id="toronto"><br />
+                    <label for="toronto">Toronto, Canada</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Shanghai" id="shanghai"><br />
+                    <label for="shanghai">Shanghai, China</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Dublin" id="dublin"><br />
+                    <label for="dublin">Dublin, Ireland</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Hursley" id="hursley"><br />
+                    <label for="hursley">Hursley, United Kingdom</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Boeblingen" id="boeblingen"><br />
+                    <label for="boeblingen">Boeblingen, Germany</label>
+                    <span>&#10060;</span>
+                </div>
+                <div class="del-box">
+                    <input type="checkbox" name="city" value="Somewhere else" id="somewhere"><br />
+                    <label for="somewhere">Somewhere else</label>
+                    <span>&#10060;</span>
+                </div>
+                <br /><br />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- Adding text box for adding check boxes -->
+        <div class="add-checkboxes">
+            <input type="text" id="add-text">
+            <input type="button" value="ADD" id="add-button">
+        </div>
+
+        <div class="portfolio">
+            <p class="category">3. Portfolio</p><hr /><br /    >
+            <p>Prove you're IBM's next great designer by showing us who you are. What you've done. How you think.</p>
+            <p>Tell us your story.</p><br />
+            <input type="url" placeholder="Portfolio link*" class="full-length" required><br /><br />
+            <textarea rows="4" cols="50" placeholder="Anything else(another link, availability, etc)?"  class="full-length"></textarea><br /><br />
+            <input type="submit" value="Submit"  class="active">
+
+        </div>
+        </form>
+        <script src="main.js"></script>
+    </body>
+</html>

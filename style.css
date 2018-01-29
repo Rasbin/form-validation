@@ -1,0 +1,263 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Setting the background-color to grey */
+body {
+    background-color: #454e57;
+    color: #fff;
+}
+
+.top {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Category : Personal Info, Skills, Portfolio */
+.category {
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+form {
+    padding: 20px 150px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+
+
+hr {
+    margin-bottom: 10px;
+}
+
+input[type="button"], input[type="submit"] {
+    padding: 10px 20px;
+}
+
+input[type="button"] {
+    margin-right: 20px;
+    background-color: #454e57;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="url"]{
+    border: none;
+    border-bottom: 2px solid #81868c;
+    background-color: transparent;
+    line-height: 1.7;
+    color: #fff;
+}
+/*
+input[type="checkbox"]:hover + br + label:after {
+    content: '\274c';
+}*/
+
+.del-box span{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.del-box:hover span{
+    opacity: 1;
+}
+
+input[type="textarea"]{
+    background-color: none;
+    color: #fff;
+}
+
+input[type="button"], input[type="submit"] {
+    color: #fff;
+}
+
+input[type="submit"], input[type="url"], textarea{
+    background-color: #454e57;
+    color: #fff;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #00b2f0 !important;
+    color: #fff;
+}
+
+#address {
+    height: 60px;
+    line-height: 30px;
+    background-image: linear-gradient(#454e57, #454e57 30px, #81868c 30px, #81868c 32px);
+    background-size: 100% 32px;
+    border: none;
+}
+
+ /*
+#address {
+    height: 60px;
+    line-height: 30px;
+    background-image: linear-gradient(#454e57, #454e57 30px, #81868c 30px, #81868c 32px);
+    background-size: 100% 32px;
+}*/
+
+
+
+.left-skills {
+    float: left;
+}
+
+.right-skills {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #00b2f0;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.full-length{
+    width: 100%;
+}
+
+.medium-length{
+    width: 100%;
+}
+
+.short-length {
+    width: 100%;
+    margin-right: 77px;
+
+}
+
+input,
+textarea,
+input[type="url"]; ;
+ {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.left-cat {
+    float: left;
+    width: 75%;
+}
+.right-cat {
+    width: 20%;
+    float: right;
+}
+
+input[type="radio"] {
+    width: 0px;
+    opacity: 0;
+}
+
+input + label {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    /*margin-left: -17px;*/
+}
+
+input:checked + label {
+    background-color: #00b2f0;
+}
+
+input[type="checkbox"] {
+    width: 0px;
+    opacity: 0;
+}
+
+input + br + label::before {
+    border: 1px solid #fff;
+     content: "\00a0";
+     display: inline-block;
+     font: 16px/1em sans-serif;
+     height: 16px;
+     margin: 0 .25em 0 0;
+     padding: 0;
+     vertical-align: top;
+     width: 16px;
+
+}
+
+textarea {
+    background-color: #454e57;
+}
+
+#phone {
+    width: 100%
+}
+
+input:placeholder{
+    padding: 5px;
+}
+
+
+
+/*Validation Effects */
+input:focus:invalid{
+    /*border-bottom: 2px solid red;*/
+    background: url(img/alertred.png) no-repeat 95% 50%;
+    background-size: 25px;
+}
+
+.invalid {
+    background: url(img/alertred.png) no-repeat 95% 50%;
+    background-size: 25px;
+}
+
+
+
+input:valid{
+    border-bottom: 2px solid #81868c;
+    background: url(img/icon-verified.png) no-repeat 95% 50%;
+    background-size: 25px;
+}
+
+#how-you-hear, input[type="submit"], #add-text{
+    border-bottom: 2px solid #81868c;
+    background: none;
+
+}
+
+input, textarea {
+    outline: none;
+}
+
+/*
+input:focus:invalid {
+    border-bottom: solid 1px salmon;
+    background: url(img/high-priority.png) no-repeat 95% 50%;
+    background-size: 25px;
+}*/
+
+/* Setting the design of check box when checked */
+input[type="checkbox"]:checked + br + label:before {
+  background: #fff;
+  color: #00b2f0;
+  content: "\2713";
+  text-align: center;
+}
+
+input[type="checkbox"]:checked + br + label {
+  font-weight: bold;
+}
+
+input:focus, textarea:focus{
+    border-bottom: 2px solid #00b2f0!important;
+}
